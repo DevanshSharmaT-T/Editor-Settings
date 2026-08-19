@@ -30,9 +30,11 @@ See [GUIDE.md](./GUIDE.md) for more detailed step-by-step instructions.
 
 ## Questions or Suggestions
 
-If you have suggestions, feedback, or questions about anything in this repository, reach out via my GitHub profile:
+If you have suggestions, feedback, or questions about anything in this repository, reach out via my GitHub profile or any other platform you prefer:
 
-👉 [https://github.com/DevanshSharmaT-T](https://github.com/DevanshSharmaT-T)
+👉 [Github](https://github.com/DevanshSharmaT-T)
+👉 [Gitlabs](https://gitlab.com/DevanshSharmaT_T)
+👉 [LinkedIn](https://www.linkedin.com/in/devansh-sharma-a30329202)
 
 Or check my profile there for any other linked contact methods.
 
