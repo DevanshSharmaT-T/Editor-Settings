@@ -61,9 +61,9 @@ Then open a pull request from your branch to `master` on the main repository.
 
 If anything is unclear, or you have suggestions for how this repo could be improved, reach out via:
 
-👉 [Github](https://github.com/DevanshSharmaT-T)
-👉 [Gitlabs](https://gitlab.com/DevanshSharmaT_T)
-👉 [LinkedIn](https://www.linkedin.com/in/devansh-sharma-a30329202)
+👉 [Github](https://github.com/DevanshSharmaT-T)  
+👉 [Gitlabs](https://gitlab.com/DevanshSharmaT_T)  
+👉 [LinkedIn](https://www.linkedin.com/in/devansh-sharma-a30329202)  
 
 or any related links found on that profile.
 
