@@ -1,0 +1,148 @@
+{
+  "show_edit_predictions": false,
+  "status_bar": {
+    "show_active_file": false
+  },
+  "proxy": "",
+  "edit_predictions": {
+    "provider": "zed",
+    "open_ai_compatible_api": {
+      "model": ""
+    },
+    "codestral": {
+      "max_tokens": 152,
+      "model": "codestral-latest"
+    }
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "group_by": "status",
+    "tree_view": true,
+    "dock": "left"
+  },
+  "which_key": {
+    "enabled": true
+  },
+  "document_symbols": "on",
+  "project_panel": {
+    "git_status_indicator": true,
+    "dock": "left",
+    "hide_gitignore": false
+  },
+  "markdown_preview": {
+    "limit_content_width": true,
+    "max_width": 1000
+  },
+  "diff_view_style": "unified",
+  "calls": { "mute_on_join": true, },
+  "auto_update": true,
+  "relative_line_numbers": "enabled",
+  "agent": {
+    "thinking_display": "preview",
+    "play_sound_when_agent_done": "always",
+    "single_file_review": true,
+    "dock": "right",
+    "default_profile": "minimal",
+    "inline_assistant_model": {
+      "provider": "ollama",
+      "model": "qwen2.5-coder:3b",
+    },
+    "default_model": {
+      "provider": "ollama",
+      "model": "qwen2.5-coder:0.5b",
+    },
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "default_config_options": {
+        "model": "opus[1m]",
+        "mode": "auto",
+        "effort": "xhigh",
+        "fast": false
+      },
+      "type": "registry",
+      "env": {
+        "CLAUDE_CODE_EXECUTABLE": "/home/dioe/.local/bin/claude"
+      }
+    }
+  },
+  "language_models": {
+    "ollama": {
+      "api_url": "http://localhost:11434",
+      "auto_discover": true,
+    },
+  },
+  "vim_mode": true,
+  "base_keymap": "VSCode",
+  "theme": {
+    "mode": "dark",
+    "light": "Ayu Light",
+    "dark": "Dark Pop UI",
+  },
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Colored Zed Icons Theme Dark",
+  },
+  "terminal": {
+    "copy_on_select": true,
+    "font_weight": 400.0,
+    "toolbar": {
+      "breadcrumbs": false,
+    },
+    "shell": {
+      "program": "/bin/zsh", // or /bin/zsh if you use zsh
+      "args": ["--login"],
+    },
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 2000,
+    },
+  },
+  
+  "buffer_font_size": 15.0,
+  "ui_font_size": 17.0,
+  "buffer_line_height": "comfortable",
+  "disable_ai": false,
+  "gutter": {
+    "min_line_number_digits": 0,
+    "folds": true,
+  },
+  "languages": {
+    "Markdown": {
+      "show_edit_predictions": false
+    },
+    "Ruby": {
+      "language_servers": [
+        "ruby-lsp",
+        "!solargraph",
+        "!steep",
+        "!sorbet",
+        "!rubocop",
+        "...",
+      ],
+    },
+  },
+  "lsp": {
+    "ruby-lsp": {
+      "initialization_options": {
+        "addonSettings": {
+          "Ruby LSP Rails": {
+            "enablePendingMigrationsPrompt": false,
+          },
+        },
+      },
+    },
+    "steep": {
+      "initialization_options": {
+        "require_root_steepfile": false,
+      },
+    },
+  },
+}
