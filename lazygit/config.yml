@@ -1,0 +1,79 @@
+gui:
+  showIcons: true
+  nerdFontsVersion: "3"
+  theme:
+    selectedLineBgColor:
+      - reverse
+    activeBorderColor:
+      - "#0bed00"
+      - bold
+    inactiveBorderColor:
+      - "#1b1b1b"
+    optionsTextColor:
+      - "#89dceb"
+git:
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never --hyperlinks --syntax-theme=base16-256 --file-decoration-style=none --hunk-header-decoration-style=none
+  autoFetch: true
+  autoRefresh: true
+os:
+  editPreset: ""
+  edit: 'zed "{{filename}}"'
+  editAtLine: 'zed "{{filename}}:{{line}}"'
+  editAtLineAndWait: 'zed --wait "{{filename}}:{{line}}"'
+  open: 'zed "{{filename}}"'
+  openLink: 'xdg-open "{{link}}"'
+  editInTerminal: false
+keybinding:
+  universal:
+    quit: "q"
+    return: "<esc>"
+customCommands:
+  # Open GitHub PR in browser
+  - key: "G"
+    command: "gh pr view {{.SelectedLocalBranch.Name}} -w"
+    context: "localBranches"
+    description: "Open GitHub PR in browser"
+    output: terminal
+  # Commit without pre-commit hooks (Prompts for message inside Lazygit so it doesn't crash)
+  - key: "x"
+    command: 'git commit --no-verify -m "{{.Form.CommitMessage}}"'
+    context: "files"
+    description: "Commit without pre-commit hooks"
+    prompts:
+      - type: "input"
+        title: "Commit message (no-verify):"
+        key: "CommitMessage"
+  # Prune local branches that have been deleted on the remote
+  - key: "y"
+    command: 'git fetch -p && for branch in $(git for-each-ref --format ''%(refname) %(upstream:track)'' refs/heads | awk ''$2 == "[gone]" {sub("refs/heads/", "", $1); print $1}''); do git branch -D $branch; done'
+    context: "localBranches"
+    description: "Prune local branches no longer on remote"
+    loadingText: "Pruning..."
+    output: terminal
+  # Undo last commit (soft reset) - keeps changes staged
+  - key: "U"
+    command: "git reset --soft HEAD^"
+    context: "commits"
+    description: "Undo last commit (soft reset)"
+  # Open Git Mergetool for a specific file
+  - key: "M"
+    command: "git mergetool {{ .SelectedFile.Name }}"
+    context: "files"
+    loadingText: "Opening git mergetool"
+    output: terminal
+    # 
+    # Force hijack the 'e' key for files
+  - key: "E"
+    command: 'zed "{{.SelectedFile.Name}}"'
+    context: "files"
+    description: "Force edit in Zed"
+    output: terminal
+  # Force hijack the 'e' key for commits (files inside a commit)
+  - key: "E"
+    command: 'zed "{{.SelectedCommitFile.Name}}"'
+    context: "commitFiles"
+    description: "Force edit in Zed"
+    output: terminal
+
