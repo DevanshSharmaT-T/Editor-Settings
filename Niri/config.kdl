@@ -1,0 +1,118 @@
+// Niri Configuration - The "Rust Suite"
+// -------------------------------------
+
+// --- STARTUP APPLICATIONS ---
+// Start the Xwayland bridge (Crucial for Steam/Discord/Games)
+spawn-at-startup "xwayland-satellite"
+
+// Start the wallpaper engine
+spawn-at-startup "swww-daemon"
+
+// Start the top bar (Ironbar)
+spawn-at-startup "ironbar"
+
+// Start the notification system (Wired)
+spawn-at-startup "wired"
+
+// --- INPUT SETTINGS ---
+input {
+    keyboard {
+        xkb {
+            layout "us"
+            // options "grp:win_space_toggle,compose:ralt,caps:escape"
+        }
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+        accel-speed 0.2
+    }
+
+    mouse {
+        accel-speed 0.2
+    }
+}
+
+// --- VISUAL LAYOUT ---
+layout {
+    // Gap between windows (in pixels)
+    gaps 16
+
+    // Width of the vertical columns
+    default-column-width { proportion 0.5; }
+
+    // Visual style of the window focus ring
+    focus-ring {
+        width 4
+        active-color "#7fc8ff"
+        inactive-color "#505050"
+    }
+
+    // Add a border for better visibility
+    border {
+        off
+        width 4
+        active-color "#ffc87f"
+        inactive-color "#505050"
+    }
+}
+
+// --- KEYBINDINGS ---
+binds {
+    // 1. APP LAUNCHING
+    // Open Terminal (Kitty)
+    Mod+T { spawn "kitty"; }
+
+    // Open Launcher (Walker)
+    Mod+D { spawn "dsearch"; }
+    Mod+A { spawn "dsearch"; }
+
+    // 2. SYSTEM CONTROLS
+    // Close the current window
+    Mod+Q { close-window; }
+
+    // Quit Niri (Log out)
+    Mod+Shift+E { quit; }
+
+    // Lock Screen (if you install swaylock later)
+    Mod+L { spawn "swaylock"; }
+
+    // Screenshots
+    Print { screenshot; }
+    Ctrl+Print { screenshot-screen; }
+    Alt+Print { screenshot-window; }
+
+    // 3. WINDOW NAVIGATION
+    // Move focus between columns (Left/Right)
+    Mod+Left  { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    // Mod+H     { focus-column-left; }
+    // Mod+L     { focus-column-right; }
+
+    // Move focus between windows in the same column (Up/Down)
+    Mod+Ctrl+Up   { move-window-up; }
+    Mod+Ctrl+Down { move-window-down; }
+    // Mod+J    { focus-window-down; }
+    // Mod+K    { focus-window-up; }
+
+    // 4. WINDOW MOVEMENT (Moving the windows themselves)
+    Mod+Ctrl+Left  { move-column-left; }
+    Mod+Ctrl+Right { move-column-right; }
+    Mod+Ctrl+H     { move-column-left; }
+    Mod+Ctrl+L     { move-column-right; }
+
+    // 5. MOUSE WHEEL
+    // Scroll left/right to move through the endless workspace
+    Mod+WheelScrollDown      { focus-column-right; }
+    Mod+WheelScrollUp        { focus-column-left; }
+    Mod+Ctrl+WheelScrollDown { move-column-right; }
+    Mod+Ctrl+WheelScrollUp   { move-column-left; }
+
+    // 6. WINDOW SIZING
+    Mod+Minus { set-column-width "-10%"; }
+    Mod+Equal { set-column-width "+10%"; }
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+    Mod+C { center-column; }
+}
