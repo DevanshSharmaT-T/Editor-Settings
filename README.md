@@ -4,8 +4,13 @@ A collection of personal editor configs and customizations, shared publicly so a
 
 This repo currently includes setups for:
 
+- **Kitty**
+- **lazygit**
 - **LazyVim**
+- **Niri**
+- **oh-my-zsh**
 - **Sublime Text**
+- **tmux**
 - **VS Code**
 - **Zed**
 
