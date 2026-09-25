@@ -57,19 +57,18 @@
       "model": "qwen2.5-coder:0.5b",
     },
   },
-  "agent_servers": {
-    "claude-acp": {
-      "default_config_options": {
-        "model": "opus[1m]",
-        "mode": "auto",
-        "effort": "xhigh",
-        "fast": false
-      },
-      "type": "registry",
-      "env": {
-        "CLAUDE_CODE_EXECUTABLE": "/home/dioe/.local/bin/claude"
-      }
-    }
+  "agent_servers": { 
+    "claude-acp": { 
+      "default_config_options": { 
+        "model": "opus[1m]", 
+        "mode": "auto", 
+        "effort": "xhigh", 
+        "fast": false 
+      }, 
+      "type": "registry", "env": { 
+        "CLAUDE_CODE_EXECUTABLE": "/home/dioe/.local/bin/claude" 
+      } 
+    } 
   },
   "language_models": {
     "ollama": {
@@ -82,7 +81,7 @@
   "theme": {
     "mode": "dark",
     "light": "Ayu Light",
-    "dark": "Dark Pop UI",
+    "dark": "VSCode Dark Modern",
   },
   "icon_theme": {
     "mode": "dark",
@@ -105,8 +104,8 @@
       "milliseconds": 2000,
     },
   },
-  
-  "buffer_font_size": 15.0,
+
+  "buffer_font_size": 17.0,
   "ui_font_size": 17.0,
   "buffer_line_height": "comfortable",
   "disable_ai": false,
