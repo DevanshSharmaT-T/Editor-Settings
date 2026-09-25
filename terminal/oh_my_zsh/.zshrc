@@ -26,7 +26,7 @@ export GIT_EDITOR="zed --wait"
 
 # NVM (Node Version Manager)
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # ASDF Setup (Removed the invalid completion line that caused errors)
@@ -78,3 +78,27 @@ nvi() {
 
 alias vim='nvi'
 alias nvim='nvi'
+alias claude1='HOME="$HOME/.claude-account-1" claude'
+alias claude2='HOME="$HOME/.claude-account-2" claude'
+zed1() {
+  HOME="$HOME/.claude-account-1" zed "$@"
+}
+
+zed2() {
+  HOME="$HOME/.claude-account-2" zed "$@"
+}
+
+# Lazygit has no official WakaTime plugin, so this sends a heartbeat on launch
+# and every 2min while it's open, tagged to whatever repo it's launched in.
+lazygit() {
+  local project="$(basename "$(git rev-parse --show-toplevel 2>/dev/null || pwd)")"
+  local hb_args=(--entity lazygit --entity-type app --project "$project" --category "code reviewing" --plugin "lazygit-wakatime/0.1.0")
+
+  wakatime-cli "${hb_args[@]}" &>/dev/null
+  ( while sleep 120; do wakatime-cli "${hb_args[@]}" &>/dev/null; done ) &
+  local hb_pid=$!
+
+  command lazygit "$@"
+
+  kill "$hb_pid" &>/dev/null
+}
