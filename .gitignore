@@ -1,2 +1,5 @@
 # tmux plugins are installed by TPM, not tracked here
 terminal/tmux/plugins/
+
+# kitty-themes is a ~700KB/171-file third-party catalog, not tracked here
+terminal/kitty/kitty-themes/
