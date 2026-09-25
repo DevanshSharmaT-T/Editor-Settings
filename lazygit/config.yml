@@ -12,9 +12,9 @@ gui:
     optionsTextColor:
       - "#89dceb"
 git:
-  pagers:
+  diffRenderers:
     - colorArg: always
-      pager: delta --dark --paging=never --hyperlinks --syntax-theme=base16-256 --file-decoration-style=none --hunk-header-decoration-style=none
+      command: delta --dark --paging=never --hyperlinks --syntax-theme=base16-256 --file-decoration-style=none --hunk-header-decoration-style=none
   autoFetch: true
   autoRefresh: true
 os:
@@ -76,5 +76,3 @@ customCommands:
     context: "commitFiles"
     description: "Force edit in Zed"
     output: terminal
-
-    
