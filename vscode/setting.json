@@ -1,0 +1,148 @@
+{
+    "vim.enableNeovim": false,
+    "workbench.colorTheme": "Spinel",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1,
+    "workbench.colorCustomizations": {
+        "[Spinel]": {
+            "editor.background": "#000000",
+            "sideBar.background": "#000000",
+            "quickInput.background": "#000000",
+            "input.background": "#000000",
+            "terminal.background": "#000000",
+            "editor.selectionBackground": "#343434",
+            "editorGroupHeader.tabsBackground": "#000000",
+            "tab.activeBackground": "#000000",
+            "tab.inactiveBackground": "#000000",
+            "tab.activeForeground": "#ff0000",
+            "tab.inactiveForeground": "#ffffff",
+            "titleBar.activeBackground": "#000000",
+            "titleBar.inactiveBackground": "#000000",
+            "titleBar.activeForeground": "#FFFFFF",
+            "breadcrumb.background": "#000000",
+            "editor.lineHighlightBackground": "#1c1c1c",
+            "sideBarTitle.foreground": "#ffffff",
+            "activityBar.background": "#000000",
+            "activityBar.foreground": "#ffffff",
+            "activityBar.inactiveForeground": "#999999"
+        }
+    },
+    "files.watcherExclude": {
+        "**": true
+    },
+    "editor.dragAndDrop": false,
+    "editor.smoothScrolling": false,
+    "editor.formatOnType": false,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["k", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "/usr/bin/nvim",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.CustomBrowser": "firefox",
+    "liveServer.settings.root": "",
+    "liveServer.settings.fileExtensions": [
+        "html",
+        "htm",
+        "xhtml",
+        "php",
+        "py",
+        "ts"
+    ],
+    "files.associations": {
+        "*.xhtml": "xml",
+        "*.erb": "erb",
+        "*.html.erb": "erb",
+        "*.js.erb": "erb"
+    },
+    "redhat.telemetry.enabled": true,
+    "explorer.confirmDelete": false,
+    "window.openFoldersInNewWindow": "on",
+    "editor.semanticHighlighting.enabled": true,
+    "[erb]": {
+        "editor.defaultFormatter": "aliariff.vscode-erb-beautify",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true
+    },
+    "[ruby]": {
+        "editor.defaultFormatter": "Shopify.ruby-lsp",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true
+    },
+    "emmet.includeLanguages": {
+        "erb": "html"
+    },
+    "editor.tokenColorCustomizations": {
+        "[Spinel]": {
+            "textMateRules": [
+                {
+                    "scope": "punctuation.section.embedded.begin.erb, punctuation.section.embedded.end.erb, meta.embedded.line.erb punctuation.definition.string.begin, meta.embedded.line.erb punctuation.definition.string.end",
+                    "settings": {
+                        "foreground": "#ff0000",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "scope": "variable.other.ruby, variable.other.readwrite.instance.ruby, source.ruby.embedded.html variable, meta.embedded.line.erb variable",
+                    "settings": {
+                        "foreground": "#00D9FF"
+                    }
+                },
+                {
+                    "scope": "keyword.control.ruby, keyword.other.special-method.ruby, source.ruby.embedded.html keyword, meta.embedded.line.erb keyword.control",
+                    "settings": {
+                        "foreground": "#ff0000",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "scope": "support.class.ruby, entity.name.type.class.ruby, meta.embedded.line.erb support.class, source.ruby.embedded.html support.class",
+                    "settings": {
+                        "foreground": "#7FFF00"
+                    }
+                },
+                {
+                    "scope": "constant.other.symbol.ruby, meta.embedded.line.erb constant.other.symbol",
+                    "settings": {
+                        "foreground": "#FFA500"
+                    }
+                },
+                {
+                    "scope": "punctuation.definition.tag.begin.html, punctuation.definition.tag.end.html, meta.tag.structure punctuation, meta.tag.block punctuation",
+                    "settings": {
+                        "foreground": "#888888",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "scope": "entity.name.tag.html, entity.name.tag.structure.any.html, entity.name.tag.block.any.html",
+                    "settings": {
+                        "foreground": "#FF6B9D"
+                    }
+                },
+                {
+                    "scope": "entity.other.attribute-name.html, entity.other.attribute-name.class.html, entity.other.attribute-name.id.html, meta.tag.structure entity.other.attribute-name",
+                    "settings": {
+                        "foreground": "#98FB98"
+                    }
+                },
+                {
+                    "scope": "source.ruby.embedded.html, meta.embedded.line.erb source.ruby",
+                    "settings": {
+                        "foreground": "#00D9FF"
+                    }
+                }
+            ]
+        }
+    },
+    "git.autofetch": true
+}
