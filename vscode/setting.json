@@ -1,0 +1,35 @@
+{
+    "files.autoSave": "afterDelay",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "vscode-pets.theme": "beach",
+    "vscode-pets.throwBallWithMouse": true,
+    "vscode-pets.petSize": "medium",
+    "glassit.alpha": 255,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": true,
+        "markdown": false,
+        "scminput": false,
+        "html": false
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "chat.viewSessions.orientation": "stacked",
+    "editor.minimap.enabled": false,
+    "claudeCode.preferredLocation": "panel",
+    "[php]": {
+        "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "python.createEnvironment.trigger": "off",
+    "git.enableSmartCommit": true
+}
