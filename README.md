@@ -42,7 +42,3 @@ If you have suggestions, feedback, or questions about anything in this repositor
 👉 [LinkedIn](https://www.linkedin.com/in/devansh-sharma-a30329202)  
 
 Or check my profile there for any other linked contact methods.
-
-## License
-
-This project is licensed under the terms of the [LICENSE](./LICENSE) file included in this repository.
